@@ -34,8 +34,6 @@ with open('scratchcards_input.txt', 'r') as file:
         for j in range(current_card_num, current_card_num+num_card_common):
             total_scratchcards[j]['occurrences'] += 1 * total_scratchcards[idx]['occurrences']
 
-# take advantage of the fact that there are no duplicate numbers in our_nums
-
 # Sum up all occurrences in num_copies
 total_occurrences = sum(card['occurrences'] for card in total_scratchcards)
 
