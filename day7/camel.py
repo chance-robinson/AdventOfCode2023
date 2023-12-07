@@ -1,6 +1,7 @@
 class CamelGame:
     """Class to represent the Camel game and calculate sums."""
 
+
     def __init__(self, input_string):
         """Initialize the CamelGame object."""
         self.hands = []
@@ -15,7 +16,6 @@ class CamelGame:
             sorted_occurrences = dict(sorted(occurrences.items(), key=lambda item: item[1], reverse=True))
             hand_obj = {'hand': hand, 'bid': bid, 'occurrences': sorted_occurrences}
             self.hands.append(hand_obj)
-
 
     def sort_types(self, strength, part):
         """Sort hand types based on strength and part."""
@@ -57,7 +57,6 @@ class CamelGame:
         
         return types
     
-
     def calculate_sum_types(self, types):
         """Calculate the sum of bids for each hand type."""
         combined_list = []
@@ -87,6 +86,7 @@ class CamelGame:
         total_sum = self.calculate_sum_types(types_dict)
         return total_sum
 
+
 if __name__ == "__main__":
     with open('camel_input.txt', 'r') as file:
         input_string =  file.read()
@@ -97,3 +97,4 @@ if __name__ == "__main__":
 
     print(f'Part 1: {part1_sum}')
     print(f'Part 2: {part2_sum}')
+    
