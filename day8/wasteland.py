@@ -41,14 +41,14 @@ class Wasteland:
         return steps_list
 
     def part1(self):
-        """Execute part 1 of the Camel game."""
+        """Execute part 1 for the Wasteland object"""
         start = ['AAA']
         stop_on = 'ZZZ'
         num_steps = self.calculate_steps_list(start, stop_on)
         return num_steps[0]
 
     def part2(self):
-        """Execute part 2 of the Camel game."""
+        """Execute part 2 for the Wasteland object"""
         start_locations = [key for key in self.nodes.keys() if key.endswith('A')]
         stop_on = 'Z'
         steps_list = self.calculate_steps_list(start_locations, stop_on)
